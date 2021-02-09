@@ -1,6 +1,16 @@
 version: '3'
 services:
+
   spring-data-elasticsearch:
     build: .
     ports:
       - "8081:8080"
+
+  elasticsearch:
+    image: elasticsearch:7.10.1
+    environment:
+      - cluster.name=docker-cluster
+      #- bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ports:
+      - "9200:9200"

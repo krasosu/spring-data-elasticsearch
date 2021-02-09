@@ -12,7 +12,7 @@ import org.springframework.data.elasticsearch.repository.config.EnableElasticsea
 
 @Configuration
 @EnableElasticsearchRepositories(basePackages = "de.krasosu.spring.data.es.repository")
-@ComponentScan(basePackages = { "com.baeldung.spring.data.es.service" })
+@ComponentScan(basePackages = { "de.krasosu.spring.data.es.service" })
 public class ElasticConfig {
 
     @Bean
